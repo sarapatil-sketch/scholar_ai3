@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scholarships | Scholar AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">🎓</span>Scholar<span class="ai">AI</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scholarships.html" class="active">Scholarships</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#features">Features</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="crumbs"><a href="index.html">Home</a> / Scholarships</div>
+        <h1>Browse scholarships</h1>
+        <p>Official government schemes link to their real pages. Records marked SAMPLE are demo data only.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- ========== Filters ========== -->
+      <div class="filters">
+        <div class="field wide">
+          <label for="fQuery">Search</label>
+          <input type="text" id="fQuery" placeholder="Search by name, provider or keyword">
+        </div>
+        <div class="field">
+          <label for="fEducation">Education</label>
+          <select id="fEducation"><option value="all">All levels</option></select>
+        </div>
+        <div class="field">
+          <label for="fLocation">Location</label>
+          <select id="fLocation"><option value="all">All locations</option></select>
+        </div>
+        <div class="field">
+          <label for="fCategory">Category</label>
+          <select id="fCategory"><option value="all">All categories</option></select>
+        </div>
+        <div class="field">
+          <label for="fDeadline">Deadline</label>
+          <select id="fDeadline">
+            <option value="any">Any time</option>
+            <option value="7">Within 7 days</option>
+            <option value="30">Within 30 days</option>
+            <option value="60">Within 60 days</option>
+          </select>
+        </div>
+        <div class="filter-actions">
+          <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+            <label class="check"><input type="checkbox" id="fSaved"> Saved only</label>
+            <div class="field" style="display:flex;align-items:center;gap:8px">
+              <label for="fType" style="margin:0">Show</label>
+              <select id="fType" style="width:auto">
+                <option value="all">Official + samples</option>
+                <option value="official">Official schemes only</option>
+                <option value="sample">Demo samples only</option>
+              </select>
+            </div>
+            <div class="field" style="display:flex;align-items:center;gap:8px">
+              <label for="fSort" style="margin:0">Sort by</label>
+              <select id="fSort" style="width:auto">
+                <option value="deadline">Deadline (soonest)</option>
+                <option value="name">Name (A to Z)</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-outline" id="fReset" type="button" style="padding:9px 18px">Reset filters</button>
+        </div>
+      </div>
+
+      <p class="result-count" id="resultCount"></p>
+      <div class="cards" id="cards" style="margin-bottom:80px"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:0;margin:0;padding:0">© Scholar AI. Built as a college project. Records marked SAMPLE are demo data. Always confirm details on the official website.</div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
